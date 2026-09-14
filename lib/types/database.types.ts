@@ -193,3 +193,11 @@ export interface WorkoutSetWithExercise extends WorkoutSet {
 export interface WorkoutSessionWithSets extends WorkoutSession {
   workout_sets: WorkoutSetWithExercise[];
 }
+
+/** Data point for the exercise 1RM progress chart (read-only query result). */
+export interface ExerciseProgressDataPoint {
+  date: string;
+  estimated1RM: number;
+  weight: number;
+  reps: number;
+}
