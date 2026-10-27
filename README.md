@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HyperTrophy — Fitness Tracking Web Application
 
-## Getting Started
+**HyperTrophy** is a full-stack web application designed to help users organize training routines, log daily workouts, and monitor strength progression over time. 
 
-First, run the development server:
+Built as an independent software engineering project, the application focuses on type-safe full-stack workflows, secure user data isolation, and component-level testability.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **User Authentication:** Secure sign-up and sign-in workflows powered by Supabase Authentication.
+- **Exercise Management:** Browse and organize exercises to build structured workouts.
+- **Training Plans:** Create and customize workout routines tailored to specific training goals.
+- **Workout Logging:** Record sets, repetitions, and weights during workout sessions.
+- **Progress Tracking:** Review historical workout logs and track training consistency over time.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework & Frontend:** Next.js, React, TypeScript
+- **Backend & Data Mutations:** Next.js Server Actions
+- **Database & Auth:** Supabase, PostgreSQL with Row-Level Security (RLS)
+- **Testing:** Vitest, React Testing Library
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Architecture & Implementation Highlights
 
-## Deploy on Vercel
+- **Server-Side Mutations:** Uses Next.js Server Actions to handle form submissions and database mutations directly on the server without redundant API boilerplate.
+- **Data Isolation via RLS:** Enforces PostgreSQL Row-Level Security policies in Supabase so authenticated users can only read and modify their own training plans and workout logs.
+- **Component Testing:** Includes unit and component tests written with Vitest and React Testing Library to verify core UI behavior.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Getting Started (Local Development)
+
+### Prerequisites
+- Node.js (v18+ recommended) and `npm`
+- A [Supabase](https://supabase.com/) project for database and authentication services
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Itzmichy0812/HyperTrophy.git](https://github.com/Itzmichy0812/HyperTrophy.git)
+   cd HyperTrophy
